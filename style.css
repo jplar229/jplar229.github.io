@@ -54,3 +54,10 @@ section {
 margin-bottom: 2em;
 }
 
+.writing-entry {
+text-indent: 1em;
+margin-bottom: 0.8em;
+white-space: pre;
+font-family: Helvetica, monospace;
+}
+
