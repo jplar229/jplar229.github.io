@@ -1,79 +1,83 @@
+/* style.css */
 body {
-  margin: 0;
-  font-family: monospace;
-  background-color: #fdfdfd;
-  color: #111;
+margin: 0;
+font-family: monospace;
+background-color: #fdfdfd;
+color: #111;
 }
 
 .container {
-  max-width: 640px;
-  margin: 80px auto;
-  padding: 0 20px;
-  text-align: left;
+max-width: 640px;
+margin: 80px auto;
+padding: 0 20px;
+text-align: left;
 }
 
 a {
-  text-decoration: none;
-  color: blue;
+text-decoration: none;
+color: blue;
 }
 
 a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.2em;
+font-size: 2.5em;
+margin-bottom: 0.2em;
 }
 
 h2 {
-  margin-top: 2em;
+margin-top: 2em;
 }
 
 section {
-  margin-bottom: 2em;
+margin-bottom: 2em;
 }
 
 .writing-entry {
-  display: flex;
-  align-items: baseline;
-  font-family: monospace;
-  margin-bottom: 0.4em;
+display: flex;
+align-items: baseline;
+margin-bottom: 0.4em;
+font-family: monospace;
 }
 
-.writing-entry .title-link {
-  flex-shrink: 0;
-  position: relative;
+.title-link {
+position: relative;
+flex-shrink: 0;
+margin-right: 1em;
 }
 
-.writing-entry .title-link::after {
-  content: \"......................................................................................................................................................................................\";
-  color: transparent;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  white-space: nowrap;
-  transition: color 0.2s ease-in-out;
+.title-link::after {
+content: "........................................................................................................................................................................................................................";
+position: absolute;
+left: 100%;
+top: 0;
+white-space: nowrap;
+overflow: hidden;
+color: transparent;
+padding-left: 0.5em;
+transition: color 0.2s ease-in-out;
 }
 
-.writing-entry .title-link:hover::after {
-  color: #aaa;
+.title-link:hover::after {
+color: #aaa;
 }
 
-.writing-entry .pub {
-  flex-shrink: 0;
-  white-space: nowrap;
-  margin-left: auto;
-  padding-left: 1em;
+.pub {
+flex-shrink: 0;
+white-space: nowrap;
+margin-left: auto;
+padding-left: 1em;
 }
 
 .contact-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-family: monospace;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+font-family: monospace;
 }
 
 .contact-links p {
-  margin: 0;
+margin: 0;
 }
