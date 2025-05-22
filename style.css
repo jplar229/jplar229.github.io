@@ -11,6 +11,7 @@ max-width: 720px;
 margin: 80px auto;
 padding: 0 20px;
 text-align: left;
+font-family: Helvetica, sans-serif;
 }
 
 a {
@@ -38,7 +39,7 @@ margin-bottom: 2em;
 .writing-entry {
 display: flex;
 align-items: baseline;
-font-family: Helvetica;
+font-family: Helvetica, sans-serif;
 margin-bottom: 0.4em;
 }
 
@@ -55,19 +56,17 @@ position: relative;
 }
 
 .writing-entry .dots::before {
-content: "................................................................................................................................................................................";
+content: "........................................................................................................................................................................................................................";
 position: absolute;
 left: 0;
 top: 0;
 white-space: nowrap;
 width: 100%;
 overflow: hidden;
+color: #aaa;
 }
 
-.writing-entry span:last-child {
+.writing-entry .pub {
 flex-shrink: 0;
 white-space: nowrap;
 }
-
-
-
