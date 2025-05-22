@@ -1,17 +1,17 @@
 /* style.css */
 body {
 margin: 0;
-font-family: monospace
+font-family: monospace;
 background-color: #fdfdfd;
 color: #111;
 }
 
 .container {
-max-width: 720px;
+max-width: 640px;
 margin: 80px auto;
 padding: 0 20px;
 text-align: left;
-font-family: monospace
+font-family: monospace;
 }
 
 a {
@@ -36,10 +36,14 @@ section {
 margin-bottom: 2em;
 }
 
+.right-align {
+text-align: right;
+}
+
 .writing-entry {
 display: flex;
 align-items: baseline;
-font-family: monospace
+font-family: monospace;
 margin-bottom: 0.4em;
 }
 
@@ -53,6 +57,11 @@ padding: 0 0.5em;
 overflow: hidden;
 white-space: nowrap;
 position: relative;
+color: transparent;
+}
+
+.writing-entry a:hover + .dots::before {
+color: #aaa;
 }
 
 .writing-entry .dots::before {
@@ -63,10 +72,12 @@ top: 0;
 white-space: nowrap;
 width: 100%;
 overflow: hidden;
-color: #aaa;
+color: transparent;
+transition: color 0.2s ease-in-out;
 }
 
 .writing-entry .pub {
 flex-shrink: 0;
 white-space: nowrap;
 }
+
