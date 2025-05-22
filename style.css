@@ -37,38 +37,35 @@ margin-bottom: 2em;
 
 .writing-entry {
 display: flex;
+justify-content: space-between;
 align-items: baseline;
 margin-bottom: 0.4em;
 font-family: monospace;
+position: relative;
 }
 
 .title-link {
 position: relative;
-flex-shrink: 0;
-margin-right: 1em;
+z-index: 1;
 }
 
-.title-link::after {
+.writing-entry:hover::before {
 content: "........................................................................................................................................................................................................................";
 position: absolute;
-left: 100%;
+left: 0;
+right: 0;
 top: 0;
 white-space: nowrap;
 overflow: hidden;
-color: transparent;
-padding-left: 0.5em;
-transition: color 0.2s ease-in-out;
-}
-
-.title-link:hover::after {
 color: #aaa;
+z-index: 0;
 }
 
 .pub {
-flex-shrink: 0;
-white-space: nowrap;
-margin-left: auto;
-padding-left: 1em;
+background-color: #fdfdfd;
+padding-left: 0.5em;
+z-index: 1;
+position: relative;
 }
 
 .contact-links {
