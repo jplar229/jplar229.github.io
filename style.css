@@ -18,10 +18,6 @@ text-decoration: none;
 color: blue;
 }
 
-a:hover {
-text-decoration: underline;
-}
-
 h1 {
 font-size: 2.5em;
 margin-bottom: 0.2em;
@@ -39,14 +35,43 @@ margin-bottom: 2em;
 display: flex;
 justify-content: space-between;
 align-items: baseline;
-border-bottom: 1px solid #ccc;
+border-bottom: none;
 padding-bottom: 2px;
 margin-bottom: 0.4em;
+position: relative;
 }
 
-.writing-entry a,
+.writing-entry::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 2px;
+background-color: blue;
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.2s ease-in-out;
+}
+
+.writing-entry:hover::after,
+.writing-entry:focus-within::after {
+transform: scaleX(1);
+}
+
+.writing-entry a {
+color: blue;
+}
+
 .writing-entry .pub {
-text-decoration: underline;
+text-decoration: none;
+color: inherit;
+transition: color 0.2s ease-in-out;
+}
+
+.writing-entry a:focus + .pub,
+.writing-entry a:active + .pub {
+color: blue;
 }
 
 .contact-links {
